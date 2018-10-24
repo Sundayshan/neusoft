@@ -1,0 +1,203 @@
+body {
+  color: #666;
+  font-style: normal;
+  font-family: "SourceHanSansCN-Light", "Lantinghei SC", "Open Sans",
+    "Hiragino Sans GB", "Microsoft YaHei", "STHeiti-Light",
+    "WenQuanYi Micro Hei", "Arial", "SimSun", "sans-serif";
+  font-size: 14px;
+}
+.value-banner {
+  background: url("../img/joinus-banner-2x.jpg") no-repeat;
+  background-size: cover;
+  display: block;
+  width: 100%;
+  height: 320px;
+  background-position: center;
+  position: relative;
+  /* top:100px; */
+}
+
+#img_banner {
+  width: 392px;
+}
+
+@media (min-width: 768px) {
+  #img_banner {
+    margin-top: -34px;
+    position: absolute;
+    left: 10px;
+    top: 144px;
+    animation: move 2s ease-out forwards;
+  }
+}
+
+@media (max-width: 767px) {
+  #img_banner {
+    top: 34px;
+    left: 0px;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(15px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate(10px);
+    opacity: 1;
+  }
+  70% {
+    transform: translate(5px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.table {
+  margin: 80px 0;
+}
+
+.table .thead ul {
+  margin-bottom: 0px;
+}
+
+.table .thead ul > li {
+  font-weight: bold;
+  border-bottom: 2px solid #3bbe7a;
+  width: 100%;
+}
+
+.btn-group-justified > .btn-group {
+  font-weight: normal;
+  padding: 20px 25px;
+  color: #aaa;
+  text-align: center;
+}
+
+.btn-group-justified > div:nth-of-type(1) {
+  text-align: left;
+}
+#t-tbody .btn-group-justified > .btn-group {
+  color: #666;
+  font-size: 16px;
+}
+
+#t-tbody .btn-group-justified > .btn-group span {
+  float: left;
+}
+
+#t-tbody li {
+  z-index: 1000;
+  border-bottom: 1px solid rgba(170, 170, 170, 0.3);
+  cursor: pointer;
+}
+
+#t-tbody li i {
+  display: none;
+  background: url("../img/join-jintou.svg") 12px 12px;
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+  transition: all 0.25s ease-out;
+}
+
+#t-tbody li .menu-down {
+  transform: rotate(180deg);
+  transition: all 0.25s ease-out;
+}
+
+.details {
+  display: none;
+  padding-left: 50px;
+  background-color: #fff;
+  padding-bottom: 50px;
+}
+
+.d-title {
+  padding-top: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.details p {
+  line-height: 1.8;
+  color: #666;
+}
+
+.mtop40 {
+  margin-top: 40px;
+}
+
+.global-btn {
+  background-color: #3bbe7a;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+section {
+  height: 300px;
+  padding-top: 100px;
+  float: left;
+  width: 50%;
+  position: relative;
+}
+
+.menu {
+  height: 33px;
+  width: 42px;
+  position: relative;
+  margin: auto;
+  padding-top: 20px;
+  border: 5px solid transparent;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+
+button {
+  cursor: pointer;
+}
+
+.bar {
+  top: -17px;
+  width: 22px;
+  height: 1px;
+  display: block;
+  margin: 6px auto;
+  position: relative;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: #3bbe7a;
+}
+
+.move-menu .bar:nth-of-type(1) {
+  transform: translateY(4px) rotate(45deg);
+}
+.move-menu .bar:nth-of-type(2) {
+  opacity: 0;
+}
+.move-menu .bar:nth-of-type(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+.move-menu .bar:nth-of-type(1) {
+  animation: rotateR 1.5s cubic-bezier(0.5, 0.2, 0.2, 1);
+}
+.move-menu .bar:nth-of-type(2) {
+  animation: fade 1.5s cubic-bezier(0.1, 0.8, 0.1, 1);
+}
+.move-menu .bar:nth-of-type(3) {
+  animation: rotateL 1.5s cubic-bezier(0.5, 0.2, 0.2, 1);
+}

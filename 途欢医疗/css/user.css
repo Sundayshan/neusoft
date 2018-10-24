@@ -1,0 +1,135 @@
+body {
+  font-style: normal;
+  font-family: "SourceHanSansCN-Light", "Lantinghei SC", "Open Sans",
+    "Hiragino Sans GB", "Microsoft YaHei", "STHeiti-Light",
+    "WenQuanYi Micro Hei", "Arial", "SimSun", "sans-serif";
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+.value-banner {
+  background: url("../img/enterprise-banner-2x.jpg") no-repeat;
+  background-size: cover;
+  display: block;
+  width: 100%;
+  height: 320px;
+  background-position: center;
+  position: relative;
+  /* top:100px; */
+}
+
+@media (min-width: 768px) {
+  #img_banner {
+    margin-top: -34px;
+    width: 520px;
+    position: absolute;
+    right: 98px;
+    top: 144px;
+    animation: move 2s ease-out forwards;
+  }
+}
+
+.feedback {
+  width: 100%;
+  margin-bottom: 100px;
+  overflow: hidden;
+}
+.feedback-l {
+  width: 35.1%;
+  float: left;
+}
+
+.feedback-l img {
+  vertical-align: middle;
+}
+
+.charge {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.charge p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+}
+.feedback-r {
+  width: 59%;
+  margin-left: 5%;
+  float: left;
+}
+
+.charge ul li {
+  font-size: 14px;
+  line-height: 30px;
+  color: #666;
+}
+
+.line {
+  border-top: 1px solid rgba(170, 170, 170, 0.3);
+  width: 100%;
+}
+
+.lbody_text p {
+  color: #666;
+  font-size: 12px;
+}
+
+.feedback-submit input {
+  width: 44.7%;
+  padding: 6px 10px;
+  margin-bottom: 3%;
+  font-size: 12px;
+  border: 1px solid rgba(170, 170, 170, 0.5);
+}
+
+textarea {
+  border: 1px solid rgba(170, 170, 170, 0.5);
+  margin-bottom: 4.7%;
+  height: 120px;
+  width: 100%;
+}
+
+input::-webkit-input-placeholder {
+  color: #999;
+  font-size: 12px;
+  text-align: left;
+}
+
+textarea::placeholder {
+  color: #999;
+  font-size: 14px;
+  text-align: left;
+}
+
+.mybtn {
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  background-color: #3bbe7a;
+  color: #fff;
+  line-height: 40px;
+  display: inline-block;
+  border-radius: 2px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  #img_banner {
+    margin-top: -34px;
+    width: 320px;
+    position: absolute;
+    right: 15px;
+    top: 88px;
+    animation: move 2s ease-out forwards;
+  }
+}

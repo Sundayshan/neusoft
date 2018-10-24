@@ -1,0 +1,590 @@
+body {
+  background-color: #f8f8f8;
+}
+
+a {
+  color: #333;
+  font-size: 16px;
+  transition: all 0.5s ease;
+}
+
+@media (min-width: 992px) {
+  .mynav li a {
+    padding: 16px 25px 5px;
+    font-size: 16px;
+    color: #333;
+  }
+}
+
+.mynav {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.98);
+}
+
+@media (min-width: 768px) {
+  .collapse ul {
+    padding: 15px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .icon-ipad-no {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-right li:nth-of-type(5) a {
+    border: transparent;
+  }
+}
+
+@media (min-width: 768px) {
+  .icon-top {
+    background: url(../img/logo-pc.svg) no-repeat;
+    display: block;
+    background-size: 80px 60px;
+    background-position: center;
+    margin-left: -15px;
+    margin-bottom: -1px;
+    width: 80px;
+    margin-top: -4px;
+    height: 56px;
+    background-color: rgba(59, 190, 122, 0.9);
+    /* margin-top: 0px; */
+    width: 130px;
+    height: 86px;
+  }
+}
+
+.navbar-right > li > a {
+  padding: 16px 16px 5px;
+  font-size: 16px;
+}
+
+@media (min-width: 767px) {
+  #lg-nav > li:nth-of-type(5) > a {
+    margin-top: 9px;
+    margin-left: 13px;
+    color: #3bbe7a;
+    background-color: transparent;
+    border: 1px solid #3bbe7a;
+    font-size: 12px;
+    padding: 4px 25px;
+    border-radius: 2px;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 767px) {
+  #bs-example-navbar-collapse-1 .navbar-right .current > a {
+    color: #3bbe7a;
+    border-bottom: #3bbe7a;
+  }
+}
+
+.value-banner {
+  background: url("../img/valuefocue-banner-2x.jpg") no-repeat;
+  background-size: cover;
+  display: block;
+  width: 100%;
+  height: 320px;
+  background-position: center;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .line-top {
+    border-top: 1px solid #3bbe7a;
+    width: 18px;
+    margin: auto;
+  }
+}
+
+#img_banner {
+  margin-top: -34px;
+  width: 520px;
+  position: absolute;
+  right: 18px;
+  top: 105px;
+  animation: move 2s ease-out forwards;
+}
+
+@media only screen and(min-width:767px) {
+  #img_banner {
+    margin-top: -34px;
+    width: 520px;
+    position: absolute;
+    right: 10px;
+    top: 144px;
+    animation: move 2s ease-out forwards;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-15px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate(-10px);
+    opacity: 1;
+  }
+  70% {
+    transform: translate(-5px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.lbody_text {
+  margin: 100px auto 80px;
+  text-align: center;
+}
+
+.intro:nth-of-type(2) {
+  margin-top: -6px;
+}
+
+.lbody_text .hr {
+  border-top: 1px solid #3bbe7a;
+  width: 30px;
+  margin: 20px auto 40px;
+}
+
+.title {
+  text-align: center;
+  color: #3bbe7a;
+  font-size: 18px;
+  margin: 0 0 2%;
+}
+
+.circle {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.center {
+  text-align: center;
+  height: 380px;
+}
+
+.circular {
+  text-align: center;
+}
+
+.circleChart {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  margin: 0 auto;
+  /*background: #3bbe7a;*/
+  /*transform: translate(20px);*/
+}
+
+.circular span {
+  color: white;
+  font-size: 50px;
+  font-size: 50px;
+}
+
+#circle2 {
+  background: url("../img/valuefocus_ico2.jpg") no-repeat;
+  background-size: 100%;
+}
+
+#circle3 {
+  background: url("../img/valuefocus_ico3.jpg") no-repeat;
+  background-size: 100%;
+}
+#circle4 {
+  background: url("../img/valuefocus_ico4.jpg") no-repeat;
+  background-size: 100%;
+}
+
+.num-value {
+  margin-top: 30px;
+}
+
+.expense {
+  background-color: rgba(222, 223, 212, 0.3);
+  padding: 3% 0 3%;
+}
+
+.manage {
+  margin: 80px 0 0;
+  padding: 24px 0;
+  background-color: rgba(222, 223, 212, 0.3);
+  padding: 3% 0 3%;
+}
+
+.text {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .ipad-no {
+    display: none;
+  }
+
+  #img_banner {
+    margin-top: -34px;
+    width: 520px;
+    position: absolute;
+    right: 10px;
+    top: 144px;
+    animation: move 2s ease-out forwards;
+  }
+}
+
+@media (max-width: 767px) {
+  .app-none {
+    display: none;
+  }
+}
+
+.manage-div1 {
+  margin-left: -15px;
+  margin-right: 5%;
+  float: left;
+}
+
+.map {
+  margin-bottom: 100px;
+}
+.map-small {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.footer {
+  background-color: #333;
+  padding: 46.5px 0;
+}
+
+.footer a:nth-of-type(1) {
+  padding: 0;
+}
+
+.footer a {
+  margin-right: 15px;
+  padding-left: 15px;
+  white-space: nowrap;
+  color: rgba(170, 170, 170, 0.8);
+  float: left;
+  font-size: 14px;
+}
+
+.footer .line {
+  width: 1px;
+  height: 10px;
+  border-right: 1px solid rgba(170, 170, 170, 0.5);
+  margin-top: 6px;
+  float: left;
+}
+
+.copyright {
+  font-size: 12px;
+  color: rgba(102, 102, 102, 0.8);
+}
+
+.foot-logo div:nth-of-type(1) {
+  margin-bottom: 7px;
+  overflow: hidden;
+}
+
+.foot-weixin {
+  background: url(../img/wewix-ico.svg) no-repeat;
+  display: block;
+  width: 42px;
+  height: 42px;
+  float: right;
+  top: -41px;
+  right: 20px;
+  position: relative;
+}
+
+.foot-mobile {
+  background: url("../img/shouji-logo-icon.svg") no-repeat;
+  display: block;
+  width: 42px;
+  height: 42px;
+  float: right;
+  top: -41px;
+  right: 20px;
+  position: relative;
+  margin-right: 20px;
+}
+
+.footer {
+  height: 141px;
+}
+
+@media (min-width: 767px) {
+  .circles {
+    background: url("../img/valuefocus_ico1.jpg") no-repeat;
+    background-size: 100%;
+    top: 1px;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .circles {
+    background: url("../img/valuefocus_ico1.jpg") no-repeat;
+    background-size: 100%;
+    top: 1px;
+    border-radius: 50%;
+    width: 162px;
+    height: 162px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    min-height: 45px;
+  }
+}
+
+.mynavbar-toggle {
+  position: relative;
+  float: right;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    min-height: 45px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-default {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-toggle {
+    padding: 8px 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .s-icon-top {
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url(../img/logo.svg);
+    background-size: 33px 33px !important;
+    height: 33px !important;
+    width: 33px !important;
+    float: left;
+  }
+  .manage-div1 {
+    margin-left: 0;
+    margin-right: 0;
+    float: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-brand {
+    padding-top: 5px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .value-banner {
+    background-image: url("../img/valuefocue-app-banner.jpg");
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  #img_banner {
+    width: 320px;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .lbody_text {
+    text-align: center;
+    margin: 50px 0 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hr {
+    border-top: 2px solid #3bbe7a;
+    width: 20px !important;
+    margin: 15px auto !important;
+  }
+}
+@media (min-width: 768px) {
+  .title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .center {
+    height: auto;
+  }
+}
+
+.number {
+  position: absolute;
+}
+
+@media (min-width: 768px) {
+  .number {
+    font-size: 50px;
+    color: #fff;
+    top: 22%;
+    display: block;
+    width: 260px;
+    height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .number {
+    font-size: 32px;
+    color: #fff;
+    top: 22%;
+    display: block;
+    width: 158px;
+    height: 32px;
+  }
+}
+/*屏幕小于768px时的导航栏效果*/
+section {
+  height: 300px;
+  padding-top: 100px;
+  float: left;
+  width: 50%;
+  position: relative;
+}
+
+.menu {
+  height: 33px;
+  width: 42px;
+  position: relative;
+  margin: auto;
+  padding-top: 20px;
+  border: 5px solid transparent;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+
+button {
+  cursor: pointer;
+}
+
+.bar {
+  top: -17px;
+  width: 22px;
+  height: 1px;
+  display: block;
+  margin: 6px auto;
+  position: relative;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: #3bbe7a;
+}
+
+.move-menu .bar:nth-of-type(1) {
+  transform: translateY(4px) rotate(45deg);
+}
+.move-menu .bar:nth-of-type(2) {
+  opacity: 0;
+}
+.move-menu .bar:nth-of-type(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+.move-menu .bar:nth-of-type(1) {
+  animation: rotateR 1.5s cubic-bezier(0.5, 0.2, 0.2, 1);
+}
+.move-menu .bar:nth-of-type(2) {
+  animation: fade 1.5s cubic-bezier(0.1, 0.8, 0.1, 1);
+}
+.move-menu .bar:nth-of-type(3) {
+  animation: rotateL 1.5s cubic-bezier(0.5, 0.2, 0.2, 1);
+}
+
+@media (max-width: 767px) {
+  .navbar-right li a {
+    border-bottom: 1px solid #e7e7e7;
+    margin: 16px 35px 5px 30px;
+    padding: 0 0 15px;
+    text-align: center;
+    color: #666;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-default .mynavbar-collapse {
+    border: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .mynavbar-collapse ul {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .container {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.s-footer {
+  background-color: #333;
+  text-align: center;
+  color: rgba(102, 102, 102, 0.8);
+  padding: 16.5px 0;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .s-footer {
+    font-size: 10px;
+  }
+}
