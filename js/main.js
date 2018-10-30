@@ -8,31 +8,69 @@ var timer;
 function run(){
 	timer=setInterval(function(){
 		num++;
-		if(num>=3){
-			num=0;
-		}
+		if(num==3){
+            num=0;
+            $('.prev-banner').attr('style','background-image:url(img/aboutus-banner2-2x-small.jpg)');
+            $('.next-banner').attr('style','background-image:url(img/aboutus-banner1-2x-small.jpg)');
+        }else if(num==1){
+            $('.prev-banner').attr('style','background-image:url(img/future-start-banner1-2x-small.jpg)');
+            $('.next-banner').attr('style','background-image:url(img/aboutus-banner2-2x-small.jpg)');
+        }else if(num==2){
+            $('.prev-banner').attr('style','background-image:url(img/aboutus-banner1-2x-small.jpg)');
+            $('.next-banner').attr('style','background-image:url(img/future-start-banner1-2x-small.jpg)');
+        }		
 		$('.cs-carousel .item').eq(num).stop().fadeIn(500).siblings().stop().fadeOut(500);
 		$('.cs-carousel .item .carousel-text>div').removeClass('textbg');
 		$('.cs-container .cs-dot li').eq(num).addClass('active').siblings().removeClass('active');
-	},2000)
+	},5000)
 }
 run();
 /*小图片点击事件*/
-//$('.prev-banner').click(function(){
-//	num--;
-//	console.log(num)
-//	if(num<-1){
-//		num=1
-//	}
-//	run();
-//})
-//$('.next-banner').click(function(){
-//	num++;
-//	if(num>=2){
-//		num=-1
-//	}
-//	run();
-//})
+$('.prev-banner').click(function(){
+    if(num==0){
+//  if($(this).css('background-image')=='url(img/aboutus-banner2-2x-small.jpg)'){   	
+        $(this).attr('style','background-image: url(img/aboutus-banner1-2x-small.jpg)');
+        $('.next-banner').attr('style','background-image: url(img/future-start-banner1-2x-small.jpg)');        
+        $('.cs-carousel .item').eq(num).stop().fadeIn(500).siblings().stop().fadeOut(500);
+		$('.cs-container .cs-dot li').eq(num).addClass('active').siblings().removeClass('active');  
+    	num=2;
+    }else if(num==1){
+//  	else if($(this).attr('style')=='background-image: url(img/aboutus-banner1-2x-small.jpg)'){
+        $(this).attr('style','background-image: url(img/future-start-banner1-2x-small.jpg)');
+        $('.next-banner').attr('style','background-image: url(img/aboutus-banner2-2x-small.jpg)');
+        $('.cs-carousel .item').eq(num).stop().fadeIn(500).siblings().stop().fadeOut(500);
+		$('.cs-container .cs-dot li').eq(num).addClass('active').siblings().removeClass('active'); 
+    	num=1;
+    }else if(num==2){
+//  	else if($(this).attr('style')=='background-image: url(img/future-start-banner1-2x-small.jpg)'){   	
+        $(this).attr('style','background-image: url(img/aboutus-banner2-2x-small.jpg)');
+        $('.next-banner').attr('style','background-image: url(img/aboutus-banner1-2x-small.jpg)');
+        $('.cs-carousel .item').eq(num).stop().fadeIn(500).siblings().stop().fadeOut(500);
+		$('.cs-container .cs-dot li').eq(num).addClass('active').siblings().removeClass('active');  
+		num=0;
+    }
+});
+$('.next-banner').click(function(){
+    if($(this).attr('style')=='background-image: url(img/aboutus-banner2-2x-small.jpg)'){
+        $(this).attr('style','background-image: url(img/future-start-banner1-2x-small.jpg)');
+        $('.prev>img').attr('style','background-image: url(img/aboutus-banner1-2x-small.jpg)');       
+        $('.cs-carousel .item').eq(2).stop().fadeIn(500).siblings().stop().fadeOut(500);
+		$('.cs-container .cs-dot li').eq(2).addClass('active').siblings().removeClass('active');  
+        num=2;
+    }else if($(this).attr('style')=='background-image: url(img/aboutus-banner1-2x-small.jpg)'){
+        $(this).attr('style','background-image: url(img/aboutus-banner2-2x-small.jpg)');
+        $('.prev-banner').attr('style','background-image: url(img/future-start-banner1-2x-small.jpg)');
+        $('.cs-carousel .item').eq(1).stop().fadeIn(500).siblings().stop().fadeOut(500);
+		$('.cs-container .cs-dot li').eq(1).addClass('active').siblings().removeClass('active'); 
+        num=1;
+    }else if($(this).attr('style')=='background-image: url(img/future-start-banner1-2x-small.jpg)'){
+        $(this).attr('style','background-image: url(img/aboutus-banner1-2x-small.jpg)');
+        $('.prev-banner').attr('style','background-image: url(img/aboutus-banner2-2x-small.jpg)');
+        $('.cs-carousel .item').eq(0).stop().fadeIn(500).siblings().stop().fadeOut(500);
+		$('.cs-container .cs-dot li').eq(0).addClass('active').siblings().removeClass('active'); 
+        num=0;
+    }
+});
 /*小图标hover*/
 $('.cs-container').hover(function(){
 	$('.prev-banner').show();
