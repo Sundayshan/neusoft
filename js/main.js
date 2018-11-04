@@ -7,8 +7,11 @@ var num=-1;
 var timer;
 function run(){
 	timer=setInterval(function(){
+//		if(num==-1){
+//			num=0;
+//		}
 		num++;
-		if(num==3){
+		if(num>=3){
             num=0;
             $('.prev-banner').attr('style','background-image:url(img/aboutus-banner2-2x-small.jpg)');
             $('.next-banner').attr('style','background-image:url(img/aboutus-banner1-2x-small.jpg)');
@@ -22,48 +25,53 @@ function run(){
 		$('.cs-carousel .item').eq(num).stop().fadeIn(500).siblings().stop().fadeOut(500);
 		$('.cs-carousel .item .carousel-text>div').removeClass('textbg');
 		$('.cs-container .cs-dot li').eq(num).addClass('active').siblings().removeClass('active');
-	},5000)
+	},2000)
 }
 run();
+
+$('.cs-container').mouseenter(function(){
+	clearInterval(timer);
+})
+$('.cs-container').mouseleave(function(){
+	run();
+})
+
 /*小图片点击事件*/
 $('.prev-banner').click(function(){
     if(num==0){
-//  if($(this).css('background-image')=='url(img/aboutus-banner2-2x-small.jpg)'){   	
+    	num=2;	
         $(this).attr('style','background-image: url(img/aboutus-banner1-2x-small.jpg)');
         $('.next-banner').attr('style','background-image: url(img/future-start-banner1-2x-small.jpg)');        
         $('.cs-carousel .item').eq(num).stop().fadeIn(500).siblings().stop().fadeOut(500);
 		$('.cs-container .cs-dot li').eq(num).addClass('active').siblings().removeClass('active');  
-    	num=2;
-    }else if(num==1){
-//  	else if($(this).attr('style')=='background-image: url(img/aboutus-banner1-2x-small.jpg)'){
-        $(this).attr('style','background-image: url(img/future-start-banner1-2x-small.jpg)');
+    }else if(num==2){
+    	num=1;
+		$(this).attr('style','background-image: url(img/future-start-banner1-2x-small.jpg)');
         $('.next-banner').attr('style','background-image: url(img/aboutus-banner2-2x-small.jpg)');
         $('.cs-carousel .item').eq(num).stop().fadeIn(500).siblings().stop().fadeOut(500);
-		$('.cs-container .cs-dot li').eq(num).addClass('active').siblings().removeClass('active'); 
-    	num=1;
-    }else if(num==2){
-//  	else if($(this).attr('style')=='background-image: url(img/future-start-banner1-2x-small.jpg)'){   	
+		$('.cs-container .cs-dot li').eq(num).addClass('active').siblings().removeClass('active');     	
+    }else if(num==1){
+    	num=0;	
         $(this).attr('style','background-image: url(img/aboutus-banner2-2x-small.jpg)');
         $('.next-banner').attr('style','background-image: url(img/aboutus-banner1-2x-small.jpg)');
         $('.cs-carousel .item').eq(num).stop().fadeIn(500).siblings().stop().fadeOut(500);
 		$('.cs-container .cs-dot li').eq(num).addClass('active').siblings().removeClass('active');  
-		num=0;
     }
 });
 $('.next-banner').click(function(){
-    if($(this).attr('style')=='background-image: url(img/aboutus-banner2-2x-small.jpg)'){
+    if(num==1){
         $(this).attr('style','background-image: url(img/future-start-banner1-2x-small.jpg)');
         $('.prev>img').attr('style','background-image: url(img/aboutus-banner1-2x-small.jpg)');       
         $('.cs-carousel .item').eq(2).stop().fadeIn(500).siblings().stop().fadeOut(500);
 		$('.cs-container .cs-dot li').eq(2).addClass('active').siblings().removeClass('active');  
         num=2;
-    }else if($(this).attr('style')=='background-image: url(img/aboutus-banner1-2x-small.jpg)'){
+    }else if(num==0){
         $(this).attr('style','background-image: url(img/aboutus-banner2-2x-small.jpg)');
         $('.prev-banner').attr('style','background-image: url(img/future-start-banner1-2x-small.jpg)');
         $('.cs-carousel .item').eq(1).stop().fadeIn(500).siblings().stop().fadeOut(500);
 		$('.cs-container .cs-dot li').eq(1).addClass('active').siblings().removeClass('active'); 
         num=1;
-    }else if($(this).attr('style')=='background-image: url(img/future-start-banner1-2x-small.jpg)'){
+    }else if(num==2){
         $(this).attr('style','background-image: url(img/aboutus-banner1-2x-small.jpg)');
         $('.prev-banner').attr('style','background-image: url(img/aboutus-banner2-2x-small.jpg)');
         $('.cs-carousel .item').eq(0).stop().fadeIn(500).siblings().stop().fadeOut(500);

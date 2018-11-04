@@ -25,7 +25,7 @@ body {
   #img_banner {
     margin-top: -34px;
     position: absolute;
-    left: 10px;
+    left: 98px;
     top: 144px;
     animation: move 2s ease-out forwards;
   }
